@@ -1,0 +1,113 @@
+html, body {
+  font-family: Candara, serif;
+  padding: 200px;
+}
+
+.letra {
+  border-bottom-style: solid;
+  min-width: 70px;
+  min-height: 80px;
+  vertical-align: text-bottom;
+  font-size: 75px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.letra-pequena {
+  border-bottom-style: solid;
+  min-width: 40px;
+  min-height: 40px;
+  vertical-align: text-bottom;
+  font-size: 40px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.alfabeto {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.caractere {
+  font-size: 50px;
+  border: solid black;
+  margin: 2px;
+  display: inline-block;
+  min-width: 70px;
+  background-color: #a4a4a4;
+}
+
+.errado {
+  background-color: #a10f0f;
+}
+
+.certo {
+  background-color: #456e1b;
+}
+
+.palavra {
+  max-width: 50%;
+  min-width: 50%;
+  display: inline-block;
+
+}
+
+.forca {
+  max-width: 50%;
+  display: inline-block;
+}
+
+.perdeu {
+  height: 200px;
+  margin-bottom: 100px;
+}
+
+.ganhou {
+  height: 200px;
+  margin-bottom: 100px;
+}
+
+.imagem {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  height: 256px;
+}
+
+.legenda {
+  font-size: 26px;
+  background-color: rgba(231, 211, 10, 0.62);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dicas {
+  font-size: 20px;
+  background-color: rgba(231, 211, 10, 0.62);
+  padding: 18px;
+  border-radius: 5px;
+}
+
+.botoes {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.botao {
+  margin-left: 10px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #52bd52;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}

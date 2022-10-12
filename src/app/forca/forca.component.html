@@ -1,0 +1,55 @@
+<div>
+  <div class="forca">
+    <img src="assets/imagens/{{erros}}.png">
+  </div>
+
+  <div class="palavra">
+
+    <div class="botoes">
+      <button *ngIf="this.primeiraLetra === ''" class="botao" (click)="dicaPrimeiraLetra()">DICA - PRIMEIRA LETRA</button>
+      <button *ngIf="this.primeiraLetra != '' && this.segundaLetra === ''" class="botao" (click)="dicaSegundaLetra()">DICA - SEGUNDA LETRA</button>
+      <button class="botao" (click)="proximaPalavra()">PRÓXIMA PALAVRA</button>
+    </div>
+
+    <br/>
+    <div *ngIf="erros == tentativas" class="perdeu">
+      <p class="legenda">A palavra é: {{palavra}}</p>
+      <img class="imagem" src="assets/imagens/game_over.png">
+    </div>
+
+
+    <div *ngIf="isVencedor()" class="ganhou">
+      <p class="legenda">Você acertou!</p>
+      <img class="imagem" src="assets/imagens/win.png">
+    </div>
+
+    <div *ngIf="!isVencedor() && erros != tentativas ">
+      <div class="dicas">
+        Dicas:
+        <ul>
+          <li>Tente colocar as vogais: A-E-I-O-U</li>
+          <li>Tente as letras de acordo com a frequência que elas aparecem no idioma</li>
+          <li>Por exemplo o nosso português, as letras a seguir são as mais frequentes: A-E-O-S-R-I-D-M-N</li>
+          <li *ngIf="this.primeiraLetra != ''">A primeira letra é: {{this.primeiraLetra}}</li>
+          <li *ngIf="this.segundaLetra != ''">A segunda letra é: {{this.segundaLetra}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <span *ngFor="let letra of letras" [ngClass]="{'letra': letras.length <= 9,'letra-pequena': letras.length > 9}">
+      {{apresenta(letra)}}
+    </span>
+  </div>
+</div>
+
+<div class="alfabeto">
+
+  <span *ngFor="let letra of alfabeto" class="caractere"
+    [ngClass]="{'certo': isCorreta(letra),  'errado': isErrado(letra)}">
+    {{letra}}
+  </span>
+</div>
